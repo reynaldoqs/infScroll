@@ -1,0 +1,26 @@
+<div class="container">
+  <md-list [@itemAnimation]="animationState">
+    <md-list-item *ngFor="let pokemon of pokemons | async">
+      <img md-list-avatar src="{{pokemon?.img}}" alt="...">
+      <h3 md-line> {{pokemon?.name}} </h3>
+      <p md-line>
+        <span *ngFor="let type of pokemon.type" class="type">
+          {{type}}
+        </span>
+      </p>
+    </md-list-item>
+  </md-list>
+  <div
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="1000"
+    (scrolled)="onScroll()"
+  >
+  </div>
+  <div *ngIf="finished; else loading">
+    all pokemos are loaded!!!
+  </div>
+  <ng-template #loading> 
+      <md-spinner [strokeWidth]="5"></md-spinner>
+  </ng-template>
+</div>

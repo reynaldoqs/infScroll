@@ -1,0 +1,14 @@
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+  }
+  md-toolbar{
+      z-index: 2;
+  }
+  .example-form {
+    width: 250px;
+    font-size: 14px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }

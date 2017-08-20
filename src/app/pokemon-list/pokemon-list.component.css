@@ -1,0 +1,30 @@
+.container{
+    padding-top: 10px;
+}
+md-spinner{
+    width: 70px;
+    height: 70px;
+    margin: 35px auto;
+}
+md-list{
+    padding: 6px;
+    box-sizing: border-box;
+}
+md-list-item {
+    margin-bottom: 5px;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+.type:after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #515151;
+    display: inline-block;
+    margin: 2px;
+}
+.type:last-child:after{
+    content: "";
+    opacity: 0;
+}
